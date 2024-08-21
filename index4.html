@@ -1,0 +1,428 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- 标签 -->
+    <style>
+        /*id样式表  */
+
+        #rose {
+            position: absolute;
+            color: rgb(13, 28, 110);
+            /* color: 迪奥水晶蓝; */
+            background-color: rgb(158, 211, 241);
+            text-shadow: 3px -3px 5px white;
+            border-left: 20px solid rgb(90, 78, 90);
+            width: 1000px;
+            left: 50px;
+            top: 340px;
+            font-size: 50px;
+            font-family: Bauhaus 93;
+            opacity: 0.8;
+            text-align: justify;
+        }
+
+        #panda {
+            color: rgb(65, 65, 65);
+            text-shadow: 3px -3px 5px rgb(255, 255, 255);
+            font-size: 50px;
+            font-family: Bauhaus 93;
+            opacity: 0.8;
+            text-align: center;
+        }
+
+        .pandaBoder {
+            position: absolute;
+            border-left: 20px solid rgb(90, 78, 90);
+            border-radius: 20px 20px 20px 20px;
+            width: 800px;
+            left: 50px;
+            top: 60px;
+            /* color: 迪奥水晶蓝; */
+            background-color: rgb(197, 158, 241);
+        }
+
+        #background {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 1800px;
+            opacity: 0.85;
+            border-radius: 20px 20px 20px 20px;
+            src: url();
+        }
+
+        #fox {
+            position: fixed;
+            top: 700px;
+            right: 550px;
+            width: 150px;
+            opacity: 1;
+            border-radius: 20px 20px 20px 20px;
+
+        }
+
+        #butterfly {
+            position: fixed;
+            /* 像素的 百分比  */
+            top: 700px;
+            right: 120px;
+            width: 500px;
+            opacity: 0.65;
+        }
+
+        #butterfly2 {
+            position: fixed;
+            /* 像素的 百分比  */
+            top: 40px;
+            right: 650px;
+            width: 150px;
+            opacity: 0.65;
+            z-index: 1;
+        }
+
+        #point {
+            position: fixed;
+            top: 40px;
+            left: 870px;
+            width: 100px;
+            opacity: 0.8;
+        }
+
+        #sun {
+            position: fixed;
+            top: 40px;
+            right: 550px;
+            width: 100px;
+            opacity: 0.8;
+            z-index: 10;
+            scale: 1;
+            /* transition: scale 3s ease-in; */
+            transition: scale 1.5s ease-out;
+        }
+
+        #sun:hover {
+            scale: 1.5;
+        }
+
+        #p1 {
+            position: fixed;
+            top: 40px;
+            right: 430px;
+            width: 100px;
+            opacity: 1;
+            z-index: 10;
+            font-size: 1.5rem;
+        }
+
+        /* 标签样式表 */
+        body {
+            background-color: bisque;
+            background-image: url(background.gif.gif);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            opacity: 0.85;
+            white-space: pre;
+        }
+
+        /* 标签样式表 */
+        video {
+            position: fixed;
+            width: 30vw;
+            top: 9vw;
+            right: 9vw;
+            border-radius: 20px 30px 40px 50px;
+            z-index: 10;
+        }
+
+        #title1 {
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            text-align: center;
+            z-index: 100;
+            opacity: 1;
+        }
+
+
+        /* 未点击链接 默认样式 */
+        #a1:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        /* 已点击链接 默认样式 */
+        #a1:visited {
+            color: green;
+            text-decoration: none;
+        }
+
+        /* 鼠标移入链接上 默认样式 */
+        #a1:hover {
+            color: red;
+            font-style: italic;
+        }
+
+        /* 鼠标按下链接 默认样式 */
+        #a1:active {
+            color: blue;
+        }
+
+        #NewDivStyle {
+            position: relative;
+            top: 1700px;
+            left: 0px;
+            width: 50%;
+            height: 500px;
+            border: 4mm ridge rgba(211, 200, 50, 6);
+        }
+
+        .NewDivContent {
+            text-align: match-parent;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: oblique;
+            font-size: 1.7rem;
+            color: rgb(98, 0, 255);
+            background-color: blanchedalmond;
+        }
+
+        .fillContent {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: fit-content;
+            white-space: initial;
+        }
+
+        .spanStyle1 {
+            text-align: center;
+            color: red;
+            font-style: oblique;
+            font-size: 1.5rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .spanStyle2 {
+            text-align: center;
+            color: green;
+            font-style: italic;
+            font-size: 1.8rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #spanContent {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            border-style: dashed;
+            border-color: red;
+            background-color: white;
+        }
+
+        #boxAnimation {
+            position: relative;
+            background-color: blue;
+            top: 1600px;
+            left: 200px;
+            width: 600px;
+            height: 300px;
+            transition: border-radius 2s ease-in;
+        }
+
+        #boxAnimation:hover {
+            border-radius: 50%;
+        }
+
+        .OpcityAnimation {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 13em;
+            font-family: 'Courier New', Courier, monospace;
+            color: red;
+            position: inherit;
+            opacity: 0;
+            text-align: center;
+            z-index: 15
+        }
+
+        .OpcityAnimation:hover {
+            opacity: 1;
+        }
+
+        #tips {
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #sequenceAnimation {
+            position: relative;
+            top: 1550px;
+            left: 200px;
+            width: 600px;
+            height: 300px;
+            background-color: red;
+            opacity: 0;
+            transition: opacity 2s ease-in, background-color 1s ease-out;
+        }
+
+        #sequenceAnimation:hover {
+            opacity: 1;
+            background-color: blue;
+        }
+
+        #widthAnimation {
+            position: relative;
+            top: 1400px;
+            left: 200px;
+            width: 600px;
+            background-color: red;
+            font-size: 100px;
+            transition:width 2s ease-in;
+        }
+
+        #widthAnimation:hover {
+            width: 1000px;
+        }
+
+        #imgAnimation {
+            position: relative;
+            top: 1200px;
+            left: 1200px;
+            width: 600px;
+            height: 200px;
+            src: url(fox.png);
+            transition: src 1s ease-in;
+        }
+
+        /* #imgAnimation:hover {
+            src: url(butterfly.gif);
+        } */
+    </style>
+    <title>See if I am a fox or a god</title>
+    <link rel="shortcut icon" href="title.png">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+
+    <!-- ctrl+z:撤销操作 -->
+
+    <!-- fox部分 -->
+    <a href="https://www.youtube.com/shorts/VoFzjyVq_Qs"><img id="fox" src="fox.png"></a>
+
+    <!-- baidu部分 -->
+    <a id="a1" href="https://www.baidu.com/">
+        <h1 id="title1">百度网址</h1>
+    </a>
+
+    <!-- 玫瑰花部分 -->
+    <div id="rose">
+        Nothing can ever happen
+        twice.
+        In consequence, the sorry fact is
+        that we arrive here improvised
+        and leave without the chance to
+        practice.
+        Even if there is no one dumber,
+        if you're the planet's biggest dunce,
+        you can't repeat the class in summer.
+        this course is only offered once.
+        No day copies yesterday,
+        no two nights will teach what bliss is
+        in precisely the same way,
+        with precisely the same kisses.
+        One day, perhaps some idle tongue
+        mentions your name by accident:
+        I feel as if a rose were flunginto
+        the room, all hue and scent.
+        The next day, though you're here
+        with me,
+        I can't help looking at the clock:
+        A rose? A rose? What could that be?
+        Is it a flower or a rock?
+        Why do we treat the fleeting day
+        with so much needless fear and
+        sorrow?
+        It's in its nature not to stay:
+        Today is always gone tomorrow.
+        With smiles and kisses, we prefer
+        to seek accord beneath our star,
+        although we're different (we concur)
+        just as two drops of water are.
+        @Wislawa Szymborska
+    </div>
+
+    <!-- panda部分 -->
+    <a href="https://www.youtube.com/watch?v=l73rmrLTHQc">
+        <div class="pandaBoder">
+            <p id="panda">Will there be any pandas here</p>
+        </div>
+    </a>
+
+    <!-- 古筝部分 -->
+    <div>
+        <a id="guzheng" href="https://www.youtube.com/watch?v=iFlTZFanAWw">
+        </a>
+    </div>
+
+    <!-- 视频部分 -->
+    <video loop controls id="video.mp4" src="video.mp4" type=video>
+    </video>
+
+    <!-- 蝴蝶部分 -->
+    <a href="https://www.youtube.com/watch?v=m4w9pMQYkYg">
+        <img id="butterfly" src="butterfly.gif">
+    </a>
+
+    <img id="butterfly2" src="butterfly.gif">
+
+    <!-- 太阳部分 -->
+    <div>
+        <img id="sun" src="sun.gif">
+        <p id="p1">please hover here！</p>
+    </div>
+    <!-- 类选择器、id选择器的div -->
+    <div class="NewDivContent" id="NewDivStyle">
+        <p class="fillContent">
+            Once upon a time, in a quaint little village nestled at the edge of a vast forest, lived a man named Oliver.
+            Oliver was known for his brave heart and insatiable curiosity. One sunny morning, as he sat by the old oak
+            tree in the village square, a map fluttered down from the sky and landed at his feet.
+
+            Curious, Oliver picked up the map and saw that it led to the heart of the mysterious forest that surrounded
+            the village. The map was marked with ancient symbols and strange drawings, hinting at hidden treasures and
+            untold secrets waiting to be discovered.
+
+            Excited by the prospect of adventure, Oliver decided to embark on a journey into the unknown. He packed some
+            supplies, bid farewell to the villagers, and set off into the dense forest, with the map clutched tightly in
+            his hand.
+        </p>
+    </div>
+
+    <!-- span部分 -->
+    <div id="spanContent">
+        <p class="fillContent">hello <span class="spanStyle1">欢迎来到</span><span class="spanStyle2">我的作品集</span></p>
+    </div>
+
+    <!-- 动画部分 -->
+    <!-- going动画 -->
+    <div id="boxAnimation">
+        <span class="OpcityAnimation">going</span>
+        <div id="tips" style="position: inherit;top: -120px;">hover here</div>
+    </div>
+    <!-- 背景动画 -->
+    <div>
+        <div id="sequenceAnimation"></div>
+        <span id="tips" style="position: relative;top: 1300px;left: 200px;z-index: -100;">hover here</span>
+    </div>
+    <!-- 伸缩动画 -->
+    <div>
+        <div id="widthAnimation">hover here</div>
+    </div>
+</body>
+
+</html>
